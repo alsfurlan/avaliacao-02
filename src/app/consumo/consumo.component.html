@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Calculadora de Consumo</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label position="floating">Distância (Km)</ion-label>
+    <ion-input type="number" [(ngModel)]="distancia"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Litros Consumidos</ion-label>
+    <ion-input type="number" [(ngModel)]="litros"></ion-input>
+  </ion-item>
+
+  <ion-button expand="full" (click)="calcular()">Calcular</ion-button>
+  <ion-button expand="full" color="medium" (click)="limpar()"
+    >Limpar</ion-button
+  >
+
+  <p [ngClass]="resultadoClasse">{{ resultado }}</p>
+</ion-content>
